@@ -25,7 +25,7 @@
                 <a class="nav-link" href="login.html" data-loggedin=false>Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="register.html" data-loggedin=false>Register</a>
+                <a class="nav-link btn" routerLink="register" *ngIf="isLoggedIn">Register</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="booking.html" data-loggedin=true>Booking</a>
