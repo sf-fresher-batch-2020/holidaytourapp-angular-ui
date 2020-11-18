@@ -17,4 +17,8 @@ export class UserService {
    let url= this.apiUrl + "/users";
    return this.http.post(url,user);
  }
+
+ getUsers(){
+return this.http.get<any>(this.apiUrl+"/users");  
+ }
 }

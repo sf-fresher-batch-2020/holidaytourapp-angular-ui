@@ -34,7 +34,7 @@
                 <a class="nav-link" href="" *ngIf="isLoggedInUser"style="display: block" >Welcome</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.html" onclick="logout()" *ngIf="isLoggedInUser">Logout </a>
+                <a class="nav-link" (click)="logout()" *ngIf="isLoggedInUser">Logout </a>
             </li>
         </ul>
         </div></nav>

@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       console.log(res);
       this.toastr.success("Registered");
       form.reset();
-      this.router.navigate['login']; // redirects to home
+      this.router.navigate(['login']); // redirects to home
     });
   }
 
