@@ -12,8 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import{ DestinationComponent } from './destination/destination.component';
+import { ViewdestinationComponent } from './viewdestination/viewdestination.component'
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, RegisterComponent, LoginComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, RegisterComponent, LoginComponent, DestinationComponent, ViewdestinationComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
