@@ -1,9 +1,36 @@
-<div class="page-content" style="margin-top: 40px;"> 
-    <h3>
-        {{data.title}}
+<div class="page-content" style="margin-top: 40px;" *ngIf="data"> 
+    <h3 >
+        {{data.destitle}}
     </h3>
     <p>
      {{data.desc}}  
       </p>
    
+  </div>
+  <h3>Package Details</h3>
+  <div class="container">
+    <div id="table-responsive" >
+  
+    <table class="table table-striped" id="planner_table" >
+       <thead class="thead-dark" >
+          <tr class="bg-info">
+              <th>Package Id</th>
+            <th >Duration(in Weeks)</th>
+            <th>Ratings</th>
+            <th>Facilities</th>
+            <th>Price</th>
+            <th>Book Now</th>
+          </tr></thead>
+        <tbody *ngFor="let packs of packages">
+           <tr>
+               <td>{{packs.id}}</td>
+           <td>{{packs.Duration}}</td>
+           <td>{{packs.Ratings}}</td>
+           <td>{{packs.Facilities}}</td>
+           <td>{{packs.price}}</td>
+           <td><button type="submit" [routerLink]="['/confirmpackage/'+packs.id]">BOOK NOW</button></td>
+           </tr>
+      </tbody>
+    </table>
+    </div>
   </div>

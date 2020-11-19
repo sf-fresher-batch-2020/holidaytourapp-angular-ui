@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./destination.component.css']
 })
 export class DestinationComponent implements OnInit {
-  title:"destination";
+  
   data: any=[];
   constructor(private http: HttpClient,private authservice: AuthService) { }
 

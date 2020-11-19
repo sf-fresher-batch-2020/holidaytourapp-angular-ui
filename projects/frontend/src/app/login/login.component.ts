@@ -39,7 +39,7 @@ password:string;
         this.authService.storeLoginDetails(loggedInUser);
         if (loggedInUser.role == "USER") {
           this.toastr.success("User LoggedIn");
-          this.router.navigate(['home']);
+          this.router.navigate(["home"]);
 
         }
         else if(loggedInUser.role=="ADMIN"){

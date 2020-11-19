@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/login.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+.wrapper{
+    width: 400px;
+    height: auto;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    padding: 60px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 50px #000000;
+}
+h1{
+    margin: 0;
+    padding:  0;
+    font-weight: bold ;
+    font-size: 22px;
+    color: #368550;
+    font-family: cursive;
+    margin-bottom: 8%;
+}
+.wrapper input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.wrapper input[type=email], .wrapper input[type=password]{
+
+    border: none;
+    border-bottom: 1px solid #368550;
+    background: none;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    opacity:1 ;
+     color: yellow;
+
+}
+.wrapper input[type=submit]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: tomato;
+    font-weight: bold;
+}
+.wrapper input[type=submit]:hover{
+    cursor: pointer;
+}
+.wrapper a{
+    font-size: 14px;
+    text-decoration: none;
+    color: tan;
+    opacity: 0.8;
+}
+.wrapper a:hover{
+    color: yellow;
+    opacity: 1;
+}
+.bottom-text{
+    color:#fff ;
+
+}
+.bottom-text input{
+    width:  10%;
+    float: left;
+}
+#overlay-area{
+    position: absolute;
+    background-color: rgba(0,0, 0,0.5);
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+#head{
+    margin-top: 0;
+}
