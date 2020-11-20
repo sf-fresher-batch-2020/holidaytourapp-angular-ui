@@ -1,43 +1,48 @@
-<h3>Confirm Details</h3>
-  <div class="container">
-    <div id="table-responsive" >
-  
-    <table class="table table-striped" id="planner_table" >
-       <thead class="thead-dark" >
-          <tr class="bg-info">
-              <th>Package Id</th>
-            <th >Duration(in Weeks)</th>
-            <th>Ratings</th>
-            <th>Facilities</th>
-            <th>Price</th>
-          
-          </tr></thead>
-        <tbody *ngIf="package">
-           <tr>
-            <td>{{package.id}}</td>
-           <td>{{package.Duration}}</td>
-           <td>{{package.Ratings}}</td>
-           <td>{{package.Facilities}}</td>
-           <td>{{package.price}}</td>
-           </tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
 
-  <div class="wrapper">
-    <div id="page-content">
-        <h1>confirm Form</h1>
-        <form>
-        <form action="" method="POST">
-            <label style="color:ghostwhite">NAME</label><input type="text" name="username" id="CustomerName" placeholder="Enter username" required autofocus><br>
-            <label style="color:ghostwhite">EMAIL-ID</label><input type="email" name="email" id="email" placeholder="Enter user email" required ><br>
-            <label style="color:ghostwhite">CURRENT DATE: <input type="date"class="datepicker" name="todayReg" required id="today" value=""></label>
-            <label style="color:ghostwhite">Date of Journey: <input type="date" style="width: 200px;" class="datepicker" id="Startdate" size="20" name="dataStart" /></label>
-                 
-        </form>
-        </form>
-       
-    </div>
-</div>
-<div id="overlay-area"></div>
+<main class="container-fluid">
+    <div class="wrapper" style="width: auto;">
+      <div id="page-content">
+          <h1>confirm Form</h1>
+          <form (ngSubmit)="book()" #b="ngForm" autocomplete="off">
+          
+              <label style="color:ghostwhite">NAME</label><input type="text" name="username" id="usename" [(ngModel)]="username" placeholder="Enter username" required autofocus><br>
+              <label style="color:ghostwhite">EMAIL-ID</label><input type="email" name="email" id="email" [(ngModel)]="email" placeholder="Enter user email" required ><br>
+              <label style="color:ghostwhite">Date of Journey: <input type="date" [(ngModel)]="Startdate" style="width: 200px;" class="datepicker" id="Startdate" size="20" name="dataStart" /></label>
+               
+              <div class="row ">
+                <div class="col-md-5">  
+                    <table class="table table-bordered table-striped table-dark" id="planner_table1">
+                      <thead class="thead-dark" >
+                          <tr class="bg-info">
+                              <th>Package Id</th>
+                            <th >Duration(in Weeks)</th>
+                            <th>Ratings</th>
+                            <th>Facilities</th>
+                            <th>Price</th>
+                            
+                          </tr></thead>
+                        <tbody *ngIf="package">
+                           <tr>
+                            <td>{{package.id}}</td>
+                           <td>{{package.Duration}}</td>
+                           <td>{{package.Ratings}}</td>
+                           <td>{{package.Facilities}}</td>
+                           <td>{{package.price}}</td>
+                           </tr>
+                      </tbody>
+                      </table>
+                </div>
+                                      
+            </div>
+            <button type="submit" *ngIf="package" [disabled]="b.invalid">CONFIRM</button>
+          </form>
+         
+      </div>
+  </div>
+  <div id="overlay-area"></div>
+      
+  
+</main>
+
+
+  

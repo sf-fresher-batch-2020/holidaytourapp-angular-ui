@@ -13,6 +13,8 @@ export class UserService {
     this.apiUrl = environment.API_URL;
    }
   users;
+  tickets: any;
+  
  register (user){
    let url= this.apiUrl + "/users";
    return this.http.post(url,user);
@@ -31,4 +33,18 @@ return this.http.get<any>(this.apiUrl+"/users");
   let url= this.apiUrl+"/packages/"+id;
    return this.http.get(url);
  }
+ book(book){
+  let url= this.apiUrl + "/bookings";
+  return this.http.post(url,book);
+}
+
+getAllBookings(){
+  let url= this.apiUrl + "/bookings";
+  return this.http.get(url);
+}
+
+updateStatus(booking){
+  let url = this.apiUrl + "/bookings/"+booking.id;
+  return this.http.put(url,booking);
+}
 }

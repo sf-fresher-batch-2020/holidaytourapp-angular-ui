@@ -15,7 +15,7 @@
                <ul class="dropdown-menu">
                 <li><a class="dropdown-item" routerLink="/destination"> Destination</a></li>
                
-                <li><a class="dropdown-item" href="">Booking </a></li>
+                <li><a class="dropdown-item" routerLink="/booking">Booking </a></li>
                </ul>
             </li>
        
@@ -28,7 +28,7 @@
                 <a class="nav-link " routerLink="/register" data-toggle="collapse" *ngIf="!isLoggedInUser">Register</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="" *ngIf="isLoggedInUser">Booking</a>
+                <a class="nav-link"  routerLink="/bookings" *ngIf="isLoggedInUser">Booking</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="" *ngIf="isLoggedInUser"style="display: block" >Welcome</a>

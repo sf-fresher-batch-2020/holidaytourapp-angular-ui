@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BookingComponent } from './booking/booking.component';
+
 import { HomeComponent } from './components/home/home.component';
 import { ConfirmpackageComponent } from './confirmpackage/confirmpackage.component';
 import{ DestinationComponent } from './destination/destination.component'
@@ -14,7 +16,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'destination', component: DestinationComponent },
   { path: 'viewdestination/:id', component: ViewdestinationComponent },
-  { path: 'confirmpackage/:id', component: ConfirmpackageComponent }
+  { path: 'confirmpackage/:id', component: ConfirmpackageComponent },
+  { path: 'bookings',component: BookingComponent}
+  
 ];
 
 @NgModule({
