@@ -21,4 +21,7 @@ export class UserService {
  getUsers(){
 return this.http.get<any>(this.apiUrl+"/users");  
  }
+ getOne(id){
+  return this.http.get<any>(this.apiUrl+"/viewdestination/"+id);
+ }
 }
