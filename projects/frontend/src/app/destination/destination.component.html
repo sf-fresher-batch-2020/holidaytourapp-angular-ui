@@ -7,7 +7,7 @@
   <div class="col-md-3" style="min-width: 18rem;" *ngFor="let items of data">
     <div class="row" id="destination-cards">
     <div class="card h-100">
-  <img [src]="items.imageUrl" class="card-img-top" style="height: 250px; ">
+  <img src="assets/images/{{items.imageUrl}}" class="card-img-top" style="height: 250px; ">
   <div class="card-body">
     <h5 class="card-title">{{items.title}}</h5>
     <p class="card-text">{{items.description}}</p>

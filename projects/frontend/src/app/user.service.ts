@@ -24,4 +24,11 @@ return this.http.get<any>(this.apiUrl+"/users");
  getOne(id){
   return this.http.get<any>(this.apiUrl+"/viewdestination/"+id);
  }
+ getpackages(){
+  return this.http.get(this.apiUrl+"/packages");  
+ }
+ getpack(id:number){
+  let url= this.apiUrl+"/packages/"+id;
+   return this.http.get(url);
+ }
 }
