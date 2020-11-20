@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('/images/login.jpeg');
+    background-image: url('/assets/images/login.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -65,14 +65,7 @@ h1{
     color: yellow;
     opacity: 1;
 }
-.bottom-text{
-    color:#fff ;
 
-}
-.bottom-text input{
-    width:  10%;
-    float: left;
-}
 #overlay-area{
     position: absolute;
     background-color: rgba(0,0, 0,0.5);

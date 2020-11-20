@@ -14,9 +14,11 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import{ DestinationComponent } from './destination/destination.component';
 import { ViewdestinationComponent } from './viewdestination/viewdestination.component';
-import { ConfirmpackageComponent } from './confirmpackage/confirmpackage.component'
+import { ConfirmpackageComponent } from './confirmpackage/confirmpackage.component';
+import { BookingComponent } from './booking/booking.component';
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, RegisterComponent, LoginComponent, DestinationComponent, ViewdestinationComponent, ConfirmpackageComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, RegisterComponent, LoginComponent, DestinationComponent, ViewdestinationComponent, ConfirmpackageComponent, BookingComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
