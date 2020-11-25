@@ -21,16 +21,16 @@
                         </tr></thead>
                         <tbody *ngIf="bookings">
                             <tr *ngFor="let booking of bookings">
-                              
-                             <td>{{booking.package?.id}}</td>
+                             
                              <td>{{booking.id}}</td>
-                            <td>{{booking.package?.Duration}}</td>
-                            <td>{{booking.package?.Facilities}}</td>
-                            <td>{{booking.package?.price}}</td>
-                            <td>{{booking.username}}</td>
-                            <td>{{booking.createdDate}}</td>
-                            <td>{{booking.Startdate}}</td>
-                            <td>{{booking.enddate}}</td>
+                             <td>{{booking.pack_id}}</td>
+                            <td>{{booking.Duration}}</td>
+                            <td>{{booking.Facilities}}</td>
+                            <td>{{booking.price}}</td>
+                            <td>{{booking.name}}</td>
+                            <td>{{booking.created_date}}</td>
+                            <td>{{booking.start_date}}</td>
+                            <td>{{booking.end_date}}</td>
                             <td>{{booking.status}}</td>
                             
                             <td><button type="submit"  [disabled]="isDisabled()" *ngIf="booking.status!='CANCELLED'" (click)='cancel(booking)'>Cancel Booking</button></td>
