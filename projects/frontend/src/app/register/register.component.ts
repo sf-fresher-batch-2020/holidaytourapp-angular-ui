@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
   register(form:NgForm){
     
-    let formData={name:this.username,email:this.email, password: this.password, role:"USER", createdDate:new Date().toJSON()};
+    let formData={name:this.username,email:this.email, password: this.password, role:"USER"};
     console.log(JSON.stringify(formData));
     this.userService.register(formData).subscribe(res =>{
       console.log(res);
