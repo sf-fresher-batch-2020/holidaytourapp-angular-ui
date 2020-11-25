@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   
   private apiUrl:string;
-  url="https://holiday-mock-api.herokuapp.com/api/destination"
+  url="http://localhost:3000/api/destination"
   constructor(private http: HttpClient) { 
     this.apiUrl =  environment.API_URL;
     console.log(this.apiUrl);
