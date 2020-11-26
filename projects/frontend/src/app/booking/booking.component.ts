@@ -33,7 +33,7 @@ export class BookingComponent implements OnInit {
         this.bookings = data;
       }
       else{
-        let myBookings = this.bookings.filter(obj=>obj.createdBy == this.loggedInUser.id);
+        let myBookings = this.bookings.filter(obj=>obj.user_id == this.loggedInUser.id);
         this.bookings=myBookings;
       }
       
