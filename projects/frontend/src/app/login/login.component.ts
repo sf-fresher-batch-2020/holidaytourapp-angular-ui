@@ -44,7 +44,7 @@ password:string;
         }
         else if(loggedInUser.role=="ADMIN"){
             this.toastr.success("Admin LoggedIn");
-            this.router.navigate(['addpackages']);
+           this.router.navigate(["addpackages"]);
            
         }
 

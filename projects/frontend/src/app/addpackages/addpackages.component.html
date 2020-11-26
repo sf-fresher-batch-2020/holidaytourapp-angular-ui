@@ -1,7 +1,7 @@
 <div class="login_main">
     <div class="login_form">
         <div class="card text-center">
-        <div class="containerr">
+        <div class="container">
       <h1>ADD PACKAGE</h1>
         </div>
         <div class="card-body">
@@ -23,8 +23,10 @@
        <button class="btn btn-primary" id="add_pack"  autocomplete="off"[disabled]="a.invalid">SUBMIT</button><br><br>
         <input class="btn btn-primary" type="reset" value="Reset"><br><br>
 
-    </form>
+        <a class="btn btn-primary" routerLink="/bookings">View UserBookings </a><br>
 
+    </form>
+      <br>
         <div class="container">
             <div id="table-responsive" >
           
@@ -39,7 +41,7 @@
                     <th>Delete </th>
                     <th>Edit</th>
                   </tr></thead>
-                <tbody *ngFor="let packs of packages; let j=index">
+                <tbody *ngFor="let packs of packages">
                    <tr>
                     <td>{{packs.id}}</td>
                    <td>{{packs.Duration}}</td>
@@ -47,7 +49,7 @@
                    <td>{{packs.Facilities}}</td>
                    <td>{{packs.Price}}</td>
                    <td><a class="btn btn-danger btn-sm-text-white" (click)="delete(packs.id)">DELETE</a></td>
-                   <td><a class="btn btn-success btn-sm-text-white" (click)="edit(packs,j)">EDIT</a></td>
+                   <td><a class="btn btn-success btn-sm-text-white" (click)="edit(packs)">EDIT</a></td>
 
                    <td></td>
                    </tr>
@@ -55,3 +57,5 @@
             </table>
             </div>
           </div>
+        
+         
