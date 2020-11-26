@@ -15,7 +15,8 @@ export class BookingComponent implements OnInit {
   today=new Date();
   loggedInUser;
   constructor(
-    private route: ActivatedRoute,private userservice: UserService) {this.route.params.subscribe(params =>{
+    private route: ActivatedRoute,private userservice: UserService) {
+      this.route.params.subscribe(params =>{
     
   }) }
 
