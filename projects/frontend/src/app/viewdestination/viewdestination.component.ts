@@ -26,6 +26,15 @@ packages: any=[];
     })
 
   }
+  delete(j)
+  {
+    console.log(j);
+    this.userservice.deletepackage(j).subscribe(res=>{
+      window.location.reload();
+      this.getOne();
+    })
+    
+  }
   getOne(){
 this.userservice.getOne(this.id).subscribe(data=>{
  

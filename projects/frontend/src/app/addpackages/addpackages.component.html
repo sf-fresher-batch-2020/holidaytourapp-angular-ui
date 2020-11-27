@@ -1,0 +1,61 @@
+<div class="login_main">
+    <div class="login_form">
+        <div class="card text-center">
+        <div class="container">
+      <h1>ADD PACKAGE</h1>
+        </div>
+        <div class="card-body">
+      <form (ngSubmit)="addpack(a)" #a="ngForm" >
+        <label>ID :</label><input type="number" name="id" id="id" [(ngModel)]="id"  required/><br>
+    <label>Duration :</label><input type="number" name="duration" id="duration" [(ngModel)]="Duration" required/><br>
+    <label>Rating :</label><input type="number" name="rate" id="rate" [(ngModel)]="Ratings"  required/><br>
+    <label>Price :</label><input type="number" name="Price" id="Price" [(ngModel)]="Price"required/><br>
+    <label>Facilities</label><select type="text" id="facility" name="facility" [(ngModel)]="Facilities"required>
+        <option value="">--PLEASE SELECT --</option>
+                    <option value="gym">Gym</option>
+                    <option value="pool">Pool</option>
+                    <option value="food">Food</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="park">Park</option> 
+                    
+    </select><br>
+       <br>
+       <button class="btn btn-primary" id="add_pack"  autocomplete="off"[disabled]="a.invalid">SUBMIT</button><br><br>
+        <input class="btn btn-primary" type="reset" value="Reset"><br><br>
+
+        <a class="btn btn-primary" routerLink="/bookings">View UserBookings </a><br>
+
+    </form>
+      <br>
+        <div class="container">
+            <div id="table-responsive" >
+          
+            <table class="table table-striped" id="planner_table" >
+               <thead class="thead-dark" >
+                  <tr class="bg-info">
+                      <th>Package Id</th>
+                    <th >Duration(in Weeks)</th>
+                    <th>Ratings</th>
+                    <th>Facilities</th>
+                    <th>Price</th>
+                    <th>Delete </th>
+                    <th>Edit</th>
+                  </tr></thead>
+                <tbody *ngFor="let packs of packages">
+                   <tr>
+                    <td>{{packs.id}}</td>
+                   <td>{{packs.Duration}}</td>
+                   <td>{{packs.Ratings}}</td>
+                   <td>{{packs.Facilities}}</td>
+                   <td>{{packs.Price}}</td>
+                   <td><a class="btn btn-danger btn-sm-text-white" (click)="delete(packs.id)">DELETE</a></td>
+                   <td><a class="btn btn-success btn-sm-text-white" (click)="edit(packs)">EDIT</a></td>
+
+                   <td></td>
+                   </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        
+         

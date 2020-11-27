@@ -13,7 +13,7 @@ export class UserService {
     this.apiUrl = environment.API_URL;
    }
   users;
-  tickets: any;
+ 
   
  register (user){
    let url= this.apiUrl + "/users";
@@ -27,7 +27,7 @@ return this.http.get<any>(this.apiUrl+"/users");
   return this.http.get<any>(this.apiUrl+"/viewdestination/"+id);
  }
  getpackages(){
-  return this.http.get(this.apiUrl+"/packages");  
+  return this.http.get<any>(this.apiUrl+"/packages");  
  }
  getpack(id:number){
   let url= this.apiUrl+"/packages/"+id;
@@ -46,5 +46,19 @@ getAllBookings(){
 updateStatus(booking){
   let url = this.apiUrl + "/bookings/"+booking.id;
   return this.http.put(url,booking);
+}
+addpackage(pack){
+  let url= this.apiUrl + "/packages";
+  return this.http.post(url,pack);
+}
+deletepackage(id)
+{
+  let url= this.apiUrl + "/packages/"+id;
+  return this.http.delete(url);
+}
+updatepackage(pack)
+{
+  let url= this.apiUrl + "/packages/"+pack.id;
+  return this.http.delete(url,pack); 
 }
 }

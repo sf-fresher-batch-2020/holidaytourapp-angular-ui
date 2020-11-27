@@ -21,7 +21,7 @@ password:string;
   login(form:NgForm){
 
     this.userService.getUsers().subscribe(res =>{
-      console.log(res);
+      
       let users: any=res;
       let exists= false;
       let loggedInUser=null;
@@ -44,7 +44,7 @@ password:string;
         }
         else if(loggedInUser.role=="ADMIN"){
             this.toastr.success("Admin LoggedIn");
-            this.router.navigate(['home']);
+           this.router.navigate(["addpackages"]);
            
         }
 
