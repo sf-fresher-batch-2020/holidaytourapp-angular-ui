@@ -12,14 +12,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
 import{ DestinationComponent } from './destination/destination.component';
 import { ViewdestinationComponent } from './viewdestination/viewdestination.component';
 import { ConfirmpackageComponent } from './confirmpackage/confirmpackage.component';
 import { BookingComponent } from './booking/booking.component';
 import { AddpackagesComponent } from './addpackages/addpackages.component';
+import { from } from 'rxjs';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, RegisterComponent, LoginComponent, DestinationComponent, ViewdestinationComponent, ConfirmpackageComponent, BookingComponent, AddpackagesComponent],
+  declarations: [AppComponent, 
+    HeaderComponent,
+    HomeComponent,
+    RegisterComponent, 
+    LoginComponent, 
+    DestinationComponent, 
+    ViewdestinationComponent, 
+    ConfirmpackageComponent, 
+    BookingComponent, 
+    AddpackagesComponent,
+    
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,6 +43,8 @@ import { AddpackagesComponent } from './addpackages/addpackages.component';
     HttpClientModule,
     ToastrModule.forRoot(),
     AppRoutingModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],
