@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   username: string;
-  email: string;
+  public email: string;
   password: string;
 
   register(form:NgForm){
@@ -32,3 +32,4 @@ export class RegisterComponent implements OnInit {
   }
 
 }
+

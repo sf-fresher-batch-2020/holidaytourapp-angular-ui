@@ -1,10 +1,16 @@
-    <div class="container" style="margin-left: 9px; margin-right: auto;">
+
+   <div class="container" style="margin-left: 9px; margin-right: auto;">
+    <div class="row" style="margin-left: 40%;">
+        Search  &nbsp;<input type="text" placeholder=" search by name " [(ngModel)]="search">
+        </div>
+        <br>
         <div class="row justify-content-center">
+            
             <div class="col-md-9">
                 <table class="table table-bordered table-striped table-dark" id="planner_table1">
                     <thead class="thead-dark" >
                         <tr class="bg-info">
-                          <th>Package Id</th>
+                        
                           <th>Booking Id</th>
                           <th >Duration(in Weeks)</th>
                           <th>Facilities</th>
@@ -16,10 +22,10 @@
                           <th>Cancel</th>
                           <th> Status</th>
                         </tr></thead>
-                        <tbody *ngIf="bookings">
-                            <tr *ngFor="let booking of bookings">
+                        <tbody *ngIf="bookings" >
+                            <tr *ngFor="let booking of bookings |filter:search |paginate: {id: 'listing_pagination', itemsPerPage: 5,currentPage:p, totalItems: totalrecords}" >
                              
-                             <td>{{booking.id}}</td>
+                             
                              <td>{{booking.pack_id}}</td>
                             <td>{{booking.Duration}}</td>
                             <td>{{booking.Facilities}}</td>
@@ -37,4 +43,5 @@
             </div><br><br>
           
         </div></div>
+        <pagination-controls id="listing_pagination" directionLinks="true" (pageChange)="p =$event"></pagination-controls>
         

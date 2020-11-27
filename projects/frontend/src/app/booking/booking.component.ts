@@ -1,5 +1,6 @@
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { NumberValueAccessor } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user.service';
 
@@ -14,6 +15,10 @@ export class BookingComponent implements OnInit {
   bookings: any;
   today=new Date();
   loggedInUser;
+  search;
+  totalrecords: string;
+  
+  p: number=1;
   constructor(
     private route: ActivatedRoute,private userservice: UserService) {
       this.route.params.subscribe(params =>{
@@ -27,15 +32,18 @@ export class BookingComponent implements OnInit {
   }
   loadPack(){
     this.userservice.getAllBookings().subscribe(data =>{
-      console.log(data);
+    
       this.bookings=data;
+      
       
       if (this.loggedInUser.role =="ADMIN"){
         this.bookings = data;
+        this.totalrecords=this.bookings.length;
       }
       else{
         let myBookings = this.bookings.filter(obj=>obj.user_id == this.loggedInUser.id);
         this.bookings=myBookings;
+        this.totalrecords=this.bookings.length;
       }
       
     })
