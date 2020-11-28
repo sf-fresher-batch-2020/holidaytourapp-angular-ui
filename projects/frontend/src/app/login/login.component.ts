@@ -39,11 +39,13 @@ password:string;
         this.authService.storeLoginDetails(loggedInUser);
         if (loggedInUser.role == "USER") {
           this.toastr.success("User LoggedIn");
+          window.location.reload();
           this.router.navigate(["home"]);
 
         }
         else if(loggedInUser.role=="ADMIN"){
             this.toastr.success("Admin LoggedIn");
+            window.location.reload();
            this.router.navigate(["addpackages"]);
            
         }

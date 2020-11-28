@@ -16,7 +16,7 @@ export class UserService {
  
   
  register (user){
-   let url= this.apiUrl + "/users/login";
+   let url= this.apiUrl + "/users";
    return this.http.post(url,user);
  }
 
