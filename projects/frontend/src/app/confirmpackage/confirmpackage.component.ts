@@ -42,18 +42,18 @@ export class ConfirmpackageComponent implements OnInit {
     })
   }
   book(){
-    console.log(this.Startdate);
+    
     let enddate = new Date(this.Startdate);
             enddate.setDate(enddate.getDate() + (this.package.Duration*7));
             this.enddate = enddate.toJSON().substr(0,10);
             
             var today = new Date().toJSON();
-                console.log(today);
+                
     let bookdata={username:this.username,email:this.email,Startdate:this.Startdate,enddate:this.enddate,package:this.package,status:"BOOKED",createdBy:this.loggedInUser.id,createdDate: today};
     
-    console.log(JSON.stringify(bookdata));
+    
     this.userservice.book(bookdata).subscribe(res =>{
-      console.log(res);
+      
       this.toastr.success("Booking Confirmed");
       this.router.navigate(["bookings"]);
     })

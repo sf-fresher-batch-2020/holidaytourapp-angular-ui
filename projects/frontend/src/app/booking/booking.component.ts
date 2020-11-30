@@ -50,7 +50,6 @@ export class BookingComponent implements OnInit {
   }
 
   cancel(booking){
-    console.log("id", booking);
     booking.status="CANCELLED";
     this.userservice.updateStatus(booking).subscribe(res=>{
       this.loadPack();
