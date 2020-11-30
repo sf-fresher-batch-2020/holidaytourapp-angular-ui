@@ -15,7 +15,7 @@ export class DestinationComponent implements OnInit {
 
   ngOnInit() {
     this.authservice.getdestinations().subscribe((result)=>{
-      console.log("result",result);
+     
       this.data=result
     })
   }

@@ -20,7 +20,7 @@ packages: any=[];
     this.getOne();
 
     this.userservice.getpackages().subscribe((result)=>{
-      console.log("result",result);
+      
       this.packages=result,
       localStorage.setItem("PACKAGE DETAILS",JSON.stringify(this.packages));
     })
@@ -28,7 +28,7 @@ packages: any=[];
   }
   delete(j)
   {
-    console.log(j);
+    
     this.userservice.deletepackage(j).subscribe(res=>{
       window.location.reload();
       this.getOne();

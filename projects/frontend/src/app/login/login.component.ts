@@ -38,8 +38,10 @@ password:string;
         
         this.authService.storeLoginDetails(loggedInUser);
         if (loggedInUser.role == "USER") {
-          this.toastr.success("User LoggedIn");
+         
           this.router.navigate(["home"]);
+          this.toastr.success("User LoggedIn");
+          
 
         }
         else if(loggedInUser.role=="ADMIN"){

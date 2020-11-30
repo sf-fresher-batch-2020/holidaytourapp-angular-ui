@@ -22,9 +22,9 @@ export class RegisterComponent implements OnInit {
   register(form:NgForm){
     
     let formData={name:this.username,email:this.email, password: this.password, role:"USER"};
-    console.log(JSON.stringify(formData));
+    
     this.userService.register(formData).subscribe(res =>{
-      console.log(res);
+     
       this.toastr.success("Registered");
       form.reset();
       this.router.navigate(["login"]); // redirects to login
